@@ -26,5 +26,5 @@ O programa solicitará os seguintes inputs:
 
 ### --Observações-- 
 - Bibliotecas = [ yfinance, json, pandas, datetime ] 
-- Arquivos Funcionais = [ Todos_valores_acao.py e main.py ]
+- Arquivos Funcionais = [ Todos_valores_acao.py, main.py e tickers.json ]
 - Arquivos Testes [ Investimento_1.py e For_acoes.py ] 
