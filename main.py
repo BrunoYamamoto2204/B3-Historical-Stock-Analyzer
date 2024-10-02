@@ -7,25 +7,37 @@ with open("tickers.json","r") as r:
     tickers_list = json.load(r)
 
 print("\033[33m*Caso todas as ações estajam dando gain 100%, reinicie o código e insira outra data próxima.\033[m")
-print("\033[33m*As ações demoram cerca de 3:30s  a 4:30s para carregar.\033[m")
+print("\033[33m*As ações demoram cerca de 3:30s a 4:30s para carregar.\033[m")
 print("\033[33m*Procure usar mais ordens de compra negativos\n\033[m")
 
-start = Todos_valores_acao.dias_nao_operacao_input(input("Data start: ").strip().replace("/", "-"))
+while True:
+    try:
+        start = Todos_valores_acao.dias_nao_operacao_input(input("Data start: ").strip().replace("/", "-"))
+    except:
+        print("\033[31mFormato inválido! (dia/mês/ano)\033[m")
+    else:
+        break
 start_br = start.split("-")
 start_br_hoje = f"{start_br[2]}-{start_br[1]}-{start_br[0]}"
 start_br_ontem = Todos_valores_acao.dias_nao_operacao_ontem(f"{start_br[2]}-{start_br[1]}-{(start_br[0])}")
 
-end = Todos_valores_acao.dias_nao_operacao_input(input("Data end: ").strip().replace("/", "-"))
+while True:
+    try:
+        end = Todos_valores_acao.dias_nao_operacao_input(input("Data end: ").strip().replace("/", "-"))
+    except:
+        print("\033[31mFormato inválido! (dia/mês/ano)\033[m")
+    else:
+        break
 end_br = end.split("-")
 end_br_hoje = f"{end_br[2]}-{end_br[1]}-{end_br[0]}"
 end_br_ontem = Todos_valores_acao.dias_nao_operacao_ontem(f"{end_br[2]}-{end_br[1]}-{(end_br[0])}")
 
 lucro_acoes=[]
-por_lucro = input("Margem de lucro desejada(%): ")
-por_gain = input("Ordem de compra, para calcular gain(%): ")
+por_lucro = Todos_valores_acao.valor_correto("Margem de lucro desejada(%): ")
+por_gain = Todos_valores_acao.valor_correto("Ordem de compra, para calcular gain(%): ")
 por_gain = float(por_gain)
-volume_medio_desj = input("Volume médio: R$")
-gain_desej = float(input("Gain desejado, acima de(%): "))
+volume_medio_desj = Todos_valores_acao.valor_correto("Volume médio: R$")
+gain_desej = Todos_valores_acao.valor_correto("Gain desejado, acima de(%): ")
 
 lista_crescente_volume_ticker = []
 lista_crescente_volume_valor = []

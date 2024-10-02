@@ -29,6 +29,17 @@ def dias_nao_operacao_ontem(data_str):
     # Retorna a data anterior no formato correto
     return data.strftime("%Y-%m-%d")
 
+def valor_correto(texto):
+    while True:
+        valor = input(texto).replace(",",".")
+        try:
+            float(valor)
+        except ValueError:
+            print("\033[31mFormato inválido! Apenas números!\033[m")
+        else:
+            break
+    return float(valor)
+
 def resumo_acao(ticker,inicio_hoje,final_hoje,lucro_desejado,num_acao,por_gain,inicio_ontem,final_ontem,volume_medio_desj,gain_desej):
 
     data_inicio =  inicio_hoje.split("-")
