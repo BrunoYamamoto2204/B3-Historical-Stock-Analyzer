@@ -6,7 +6,7 @@ pd.set_option('display.max_rows', None)
 with open("tickers.json","r") as r:
     tickers_list = json.load(r)
 
-ticker = "ITSA4.SA"
+ticker = "VALE3.SA"
 acao = yf.Ticker(ticker)
 
 start = input("Data start: ").strip().replace("/","-")

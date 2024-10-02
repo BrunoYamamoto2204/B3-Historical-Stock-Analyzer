@@ -7,7 +7,7 @@ with open("tickers.json","r") as r:
     tickers_list = json.load(r)
 
 print("\033[33m*Caso todas as ações estajam dando gain 100%, reinicie o código e insira outra data próxima.\033[m")
-print("\033[33m*As ações demoram cerca de 3min e 30s para carregar.\033[m")
+print("\033[33m*As ações demoram cerca de 3:30s  a 4:30s para carregar.\033[m")
 print("\033[33m*Procure usar mais ordens de compra negativos\n\033[m")
 
 start = Todos_valores_acao.dias_nao_operacao_input(input("Data start: ").strip().replace("/", "-"))
