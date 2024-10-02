@@ -1,5 +1,5 @@
 # B3-Historical-Stock-Analyzer
-Ferramenta em Python coleta dados históricos das ações da B3 baseado em períodos personalizados pelo usuário, utilizando a API yfinance. Fornece uma análise detalhada das ações  
+Ferramenta em Python que coleta dados históricos das ações da B3 baseado em períodos personalizados pelo usuário, utilizando a API yfinance. Fornece uma análise detalhada das ações  
   
 
 ### -- Funcionalidades --
