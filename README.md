@@ -3,7 +3,7 @@ Ferramenta em Python que coleta dados históricos das ações da B3 baseado em p
   
 
 ### -- Funcionalidades --
-- Busca cotações históricas com base em períodos pesonalizados 
+- Busca cotações históricas com base em períodos personalizados 
 - Integração com a API _yfinance_ para obter dados atualizados
 - Mostra várias estatísticas sobre o desempenho das ações no período
 - Permite a visualização das ações desejadas, separadamente 
